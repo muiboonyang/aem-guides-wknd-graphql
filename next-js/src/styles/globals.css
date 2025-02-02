@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*//////////////////////////////////////////////*/
+/*AEM Styles*/
+/*//////////////////////////////////////////////*/
+
+/* AEM Responsive Grid component */
+.aem-Grid {
+    display: block;
+    width: 100%;
+}
+
+.aem-Grid::before,
+.aem-Grid::after {
+    display: table;
+    content: " ";
+}
+
+.aem-Grid::after {
+    clear: both;
+}
+
+/* Placeholder for new components */
+.aem-Grid-newComponent {
+    clear: both;
+    margin: 0;
+}
+
+/* Column of a grid */
+.aem-GridColumn {
+    box-sizing: border-box;
+    clear: both;
+    padding: 0 1rem;
+}
+
+.responsivegrid.aem-GridColumn {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Force showing hidden components */
+.aem-GridShowHidden > .aem-Grid > .aem-GridColumn,
+.aem-GridShowHidden > .cmp-container > .aem-Grid > .aem-GridColumn {
+    display: block !important;
+}
+
+/* Grid Columns */
+.aem-Grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .aem-Grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr)); /* Adjust for mobile */
+    }
+}
+
+/* Column spans */
+.aem-GridColumn--1 {
+    grid-column: span 1 / span 1;
+}
+
+.aem-GridColumn--2 {
+    grid-column: span 2 / span 2;
+}
+
+.aem-GridColumn--3 {
+    grid-column: span 3 / span 3;
+}
+
+.aem-GridColumn--4 {
+    grid-column: span 4 / span 4;
+}
+
+.aem-GridColumn--5 {
+    grid-column: span 5 / span 5;
+}
+
+.aem-GridColumn--6 {
+    grid-column: span 6 / span 6;
+}
+
+.aem-GridColumn--7 {
+    grid-column: span 7 / span 7;
+}
+
+.aem-GridColumn--8 {
+    grid-column: span 8 / span 8;
+}
+
+.aem-GridColumn--9 {
+    grid-column: span 9 / span 9;
+}
+
+.aem-GridColumn--10 {
+    grid-column: span 10 / span 10;
+}
+
+.aem-GridColumn--11 {
+    grid-column: span 11 / span 11;
+}
+
+.aem-GridColumn--12 {
+    grid-column: span 12 / span 12;
+}
+
+/* Offsets */
+.aem-GridColumn--offset--1 {
+    margin-left: 8.3333%;
+}
+
+.aem-GridColumn--offset--2 {
+    margin-left: 16.6666%;
+}
+
+.aem-GridColumn--offset--3 {
+    margin-left: 25%;
+}
+
+.aem-GridColumn--offset--4 {
+    margin-left: 33.3333%;
+}
+
+.aem-GridColumn--offset--5 {
+    margin-left: 41.6666%;
+}
+
+.aem-GridColumn--offset--6 {
+    margin-left: 50%;
+}
+
+.aem-GridColumn--offset--7 {
+    margin-left: 58.3333%;
+}
+
+.aem-GridColumn--offset--8 {
+    margin-left: 66.6666%;
+}
+
+.aem-GridColumn--offset--9 {
+    margin-left: 75%;
+}
+
+.aem-GridColumn--offset--10 {
+    margin-left: 83.3333%;
+}
+
+.aem-GridColumn--offset--11 {
+    margin-left: 91.6666%;
+}
+
+/* Responsive Grid Column */
+@media (max-width: 768px) {
+    .aem-GridColumn--phone-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    .aem-GridColumn--phone-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .aem-GridColumn--phone-3 {
+        grid-column: span 3 / span 3;
+    }
+
+    .aem-GridColumn--phone-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    .aem-GridColumn--phone-5 {
+        grid-column: span 5 / span 5;
+    }
+
+    .aem-GridColumn--phone-6 {
+        grid-column: span 6 / span 6;
+    }
+}
+
+/* Utility Classes */
+.aem-GridColumn--newline {
+    display: block;
+    clear: both !important;
+}
+
+.aem-GridColumn--none {
+    display: block;
+    clear: none !important;
+    float: left;
+}
+
+.aem-GridColumn--hide {
+    display: none;
+}
