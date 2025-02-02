@@ -1,33 +1,12 @@
-/*
- * Copyright 2022 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- *
- */
-
 "use client";
 
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import type { Metadata } from "next";
 import Head from "next/head";
-// import { headers } from "next/headers";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-// import "@/styles/globals.css";
-import "@/styles/index.scss";
-
-// export const metadata: Metadata = {
-//     title: "Adobe Experience Manager",
-//     description: "Adobe Experience Manager",
-// };
+import "@/styles/globals.css";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -36,11 +15,6 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const siteTitle = "WKND";
   const navigation = [{ name: "Adventures", href: "/" }];
-
-  // const headersList = await headers();
-  // const currentPath = headersList.get("x-next-url"); // Next.js adds this header
-  // const isCurrentPage = currentPath === "/"; // Replace with your desired page
-  // console.log("currentPath", currentPath);
 
   const pathname = usePathname();
 
