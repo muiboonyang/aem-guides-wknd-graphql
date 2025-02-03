@@ -1,8 +1,9 @@
 "use client";
 
 import { Disclosure } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -51,9 +52,12 @@ export default function Layout({ children }: LayoutProps) {
                     <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-gray-700 hover:bg-yellow-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
-                        <XIcon className="block h-6 w-6" aria-hidden="true" />
+                        <XMarkIcon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
                       ) : (
-                        <MenuIcon
+                        <Bars3Icon
                           className="block h-6 w-6"
                           aria-hidden="true"
                         />
@@ -63,22 +67,26 @@ export default function Layout({ children }: LayoutProps) {
 
                   <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                     <div className="flex-shrink-0 flex items-center">
-                      <a href="/">
-                        <img
+                      <Link href="/">
+                        <Image
                           className="block lg:hidden h-8 w-auto"
                           src={
                             process.env.NEXT_PUBLIC_URL + "/wknd-logo-dk.svg"
                           }
                           alt="WKND"
+                          height="10000"
+                          width="10000"
                         />
-                        <img
+                        <Image
                           className="hidden lg:block h-8 w-auto"
                           src={
                             process.env.NEXT_PUBLIC_URL + "/wknd-logo-dk.svg"
                           }
                           alt="WKND"
+                          height="10000"
+                          width="10000"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
                       <div className="flex space-x-4">
